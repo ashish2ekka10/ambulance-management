@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Route Management</title>
+    <link rel="stylesheet" href="pages/styles/styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="brand">NAME</div>
+        <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="pages/login.html" onclick="toggleSidebar()">Login/Sign Up</a>
+        <a href="pages/about.html" onclick="toggleSidebar()">About</a>
+        <a href="pages/rating.html" onclick="toggleSidebar()">Rating</a>
+        <a href="pages/feedback.html" onclick="toggleSidebar()">Feedback</a>
+        <a href="pages/settings.html" onclick="toggleSidebar()">Settings</a>
+        <a href="pages/more.html" onclick="toggleSidebar()">More..</a>
+        <div class="close-btn" onclick="toggleSidebar()">X</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="centered-text" style="font-size:40px; line-height:0px; display:flex; flex-direction:column;
+            justify-content: center;">
+            <h1>Rescue</h1> <br>
+            <h1 style="text-align: end;">Rovers</h1>
+        </div>
+        <h3 class="centered-text" style="align-items:end">"The simple act of caring is heroic."</h3>
+        <div style="display:flex; justify-content: center;"><a href="pages/patient-details.html" class="button">Next</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+    </script>
+
+</body>
+
+</html>

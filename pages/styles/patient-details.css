@@ -1,0 +1,70 @@
+
+body.patient-details {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+label textarea {
+    margin-top: 10px; /* Add margin for text areas */
+}
+
+input,
+select,
+textarea {
+    width: calc(100% - 10px); /* Adjusted to accommodate padding */
+    padding: 8px;
+     /* Add left margin for spacing between label and input */
+    box-sizing: border-box;
+}
+
+/* Adjust the styling for the buttons */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Add space between the form fields and buttons */
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Style the back button with a red background */
+button.back {
+    background-color: red;
+}
+
+/* Style the next button with a green background */
+button.next {
+    background-color: green;
+}
+
+button:hover {
+    background-color: #555;
+}
