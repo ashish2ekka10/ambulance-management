@@ -13,7 +13,7 @@
 
     <h2>Ambulance Details</h2>
 
-    <form>
+    <form onsubmit="storeDataAndNavigate(event)">
         <div class="form-item">
             <label for="driversName">Driver's Name:</label>
             <input type="text" id="driversName" name="driversName" required>
@@ -47,14 +47,35 @@
         <!-- Buttons -->
         <div class="form-buttons">
             <button type="button" class="back" onclick="goBack()">Back</button>
-            <button type="submit" class="next">Next</button>
+            <button type="submit" class="next">Start tracking</button>
         </div>
     </form>
 
     <script>
+        function storeDataAndNavigate(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Store form data locally (you can use localStorage, sessionStorage, or a JavaScript object)
+            const formData = {
+                driversName: document.getElementById('driversName').value,
+                driversPhoneNumber: document.getElementById('driversPhoneNumber').value,
+                ambulanceNumber: document.getElementById('ambulanceNumber').value,
+                referredHospital: document.getElementById('referredHospital').value,
+                fromLocation: document.getElementById('fromLocation').value,
+                toLocation: document.getElementById('toLocation').value,
+
+            };
+
+            // Store the data in localStorage
+            localStorage.setItem('ambulanceFormData', JSON.stringify(formData));
+
+            // Redirect to the next page (map.html)
+            window.location.href = "map.html";
+        }
+
         function goBack() {
-            // You can customize this function to redirect back to the home page
-            window.location.href = "../index.html";
+            // Redirect back to the patient-details page
+            window.location.href = "patient-details.html";
         }
     </script>
 

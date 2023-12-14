@@ -61,7 +61,7 @@ button.back {
 
 /* Style the next button with a green background */
 button.next {
-    background-color: green;
+    background-color: blue;
 }
 
 button:hover {
